@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { getGeoLoc } from "../utils/API";
+import { GetGeoLoc } from "../utils/API";
 import { Jumbotron, Container, Col, Form, Button } from "react-bootstrap";
 
-const searchLocation = () => {
+const SearchLocation = () => {
   const [zipcode, setZipcode] = useState("");
 
   const handleFormSubmit = async (event) => {
@@ -13,7 +13,7 @@ const searchLocation = () => {
     }
 
     try {
-      const response = await getGeoLoc(zipcode);
+      const response = await GetGeoLoc(zipcode);
 
       if (!response.ok) {
         throw new Error("something went wrong!");
@@ -52,4 +52,4 @@ const searchLocation = () => {
   );
 };
 
-export default searchLocation;
+export default SearchLocation;
