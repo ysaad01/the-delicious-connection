@@ -14,6 +14,7 @@ const SearchLocation = () => {
 
     try {
       const response = await GetGeoLoc(zipcode);
+      console.log(response.json())
 
       if (!response.ok) {
         throw new Error("something went wrong!");
