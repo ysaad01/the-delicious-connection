@@ -1,6 +1,5 @@
 import "./App.css";
 import { setContext } from "@apollo/client/link/context";
-import decode from "jwt-decode";
 import Landing from "./pages/Landing";
 import SearchLocation from "./pages/AddLoc";
 import Header from "./components/Header";
