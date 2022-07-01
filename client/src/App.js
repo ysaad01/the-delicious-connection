@@ -1,13 +1,14 @@
 import "./App.css";
 import Landing from "./pages/Landing";
 import SearchLocation from "./pages/AddLoc";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header className="App-header">
         <Landing />
-      </header>
+      </Header>
       <SearchLocation />
     </div>
   );

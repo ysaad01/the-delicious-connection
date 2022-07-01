@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 import { Navbar, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Navigation />
+            {/* <Navigation /> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>
