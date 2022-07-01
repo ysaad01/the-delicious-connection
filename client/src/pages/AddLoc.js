@@ -14,7 +14,7 @@ const SearchLocation = () => {
 
     try {
       const response = await GetGeoLoc(zipcode);
-      console.log(response.json())
+      console.log(response.json());
 
       if (!response.ok) {
         throw new Error("something went wrong!");
@@ -25,12 +25,12 @@ const SearchLocation = () => {
   };
   return (
     <>
-      <Jumbotron fluid className="text-light bg-dark">
+      <Jumbotron fluid>
         <Container>
           <h1>Enter Zipcode</h1>
           <Form onSubmit={handleFormSubmit}>
             <Form.Row>
-              <Col xs={12} md={8}>
+              <Col xs={12}>
                 <Form.Control
                   name="zipcode"
                   value={zipcode}
@@ -40,7 +40,7 @@ const SearchLocation = () => {
                   placeholder="enter zipcode"
                 />
               </Col>
-              <Col xs={12} md={4}>
+              <Col xs={12}>
                 <Button type="submit" variant="success" size="lg">
                   Submit Zipcode
                 </Button>
