@@ -1,12 +1,24 @@
+/* GENERAL STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  min-height: calc(100vh - 400px);
 }
 
+/* FOOTER STYLING */
+
+/* MEDIA QUERY */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

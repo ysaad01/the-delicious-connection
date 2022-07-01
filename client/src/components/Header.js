@@ -10,7 +10,11 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="/">
             <Link to="/" className="nav-bar">
-              The Delicious Connection
+              <img
+                className="site-logo"
+                src={`${process.env.PUBLIC_URL}/images/site-logo.png`}
+                alt="site logo"
+              />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

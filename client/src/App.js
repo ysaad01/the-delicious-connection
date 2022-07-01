@@ -3,6 +3,7 @@ import { setContext } from "@apollo/client/link/context";
 import Landing from "./pages/Landing";
 import SearchLocation from "./pages/AddLoc";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 // import apollo
 import {
   ApolloProvider,
@@ -32,11 +33,13 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Header className="App-header">
-          <Landing />
-        </Header>
-        <SearchLocation />
+        <Header className="App-header"></Header>
+        <Landing />
+        <div className="page-container">
+          <SearchLocation />
+        </div>
       </div>
+      <Footer />
     </ApolloProvider>
   );
 }
