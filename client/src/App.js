@@ -3,6 +3,7 @@ import { setContext } from "@apollo/client/link/context";
 import decode from "jwt-decode";
 import Landing from "./pages/Landing";
 import SearchLocation from "./pages/AddLoc";
+import Header from "./components/Header";
 // import apollo
 import {
   ApolloProvider,
@@ -32,9 +33,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <header className="App-header">
+        <Header className="App-header">
           <Landing />
-        </header>
+        </Header>
         <SearchLocation />
       </div>
     </ApolloProvider>
