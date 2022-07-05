@@ -1,6 +1,6 @@
 import "./App.css";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Landing from "./pages/Landing";
 import SearchLocation from "./pages/AddLoc";
