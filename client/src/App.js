@@ -3,12 +3,12 @@ import { setContext } from "@apollo/client/link/context";
 import { Routes, Route } from "react-router-dom";
 
 import Landing from "./pages/Landing";
-import SearchLocation from "./pages/AddLoc";
 import LoginForm from "./pages/LoginForm";
 import SignupForm from "./pages/SignupForm";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
 // import apollo
 import {
   ApolloProvider,
@@ -44,9 +44,7 @@ function App() {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />
         </Routes>
-        <div className="page-container">
-          <SearchLocation />
-        </div>
+        <div className="page-container">{/* <SearchLocation /> */}</div>
       </div>
       <Footer />
     </ApolloProvider>
