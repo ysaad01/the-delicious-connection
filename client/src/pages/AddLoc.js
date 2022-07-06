@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GetGeoLoc } from "../utils/API";
+import { YelpAPI } from "../utils/yelpAPI";
 import { Jumbotron, Container, Col, Form, Button } from "react-bootstrap";
 
 const SearchLocation = () => {
@@ -13,8 +13,8 @@ const SearchLocation = () => {
     }
 
     try {
-      const response = await GetGeoLoc(zipcode);
-      console.log(response.json());
+      const response = await YelpAPI(zipcode);
+      console.log(response);
 
       if (!response.ok) {
         throw new Error("something went wrong!");
