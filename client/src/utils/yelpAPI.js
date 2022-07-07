@@ -19,14 +19,10 @@ export const YelpAPI = (location) => {
     },
   };
 
-  axios
+  return axios
     .get(
       "https://whispering-tor-20320.herokuapp.com/https://api.yelp.com/v3/businesses/search",
       config
     )
-    .then((response) => {
-      console.log(response); //These are the results sent back from the API!
-    });
-
 }
 

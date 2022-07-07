@@ -16,7 +16,7 @@ const SearchLocation = () => {
       const response = await YelpAPI(zipcode);
       console.log(response);
 
-      if (!response.ok) {
+      if (!response) {
         throw new Error("something went wrong!");
       }
     } catch (err) {
