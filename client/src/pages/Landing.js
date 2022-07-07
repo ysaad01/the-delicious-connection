@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Carousel } from "react-bootstrap";
+import ControlledCarousel from "../components/Carousel";
 import Auth from "../utils/auth";
 
 import SearchLocation from "./AddLoc";
@@ -8,15 +8,14 @@ import SearchLocation from "./AddLoc";
 const Landing = () => {
   return (
     <div>
-      <h1>TEST</h1>
-      <div className="page-container">
+      <div>
         {Auth.loggedIn() ? (
           <>
             <SearchLocation />
           </>
         ) : (
           <>
-            <Link to="/" />
+            <ControlledCarousel />
           </>
         )}
       </div>
