@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Auth from "../utils/auth";
-// import Navigation from "./Navigation";
+// import Auth from "../utils/auth";
+import Navigation from "./Navigation";
 import { Navbar, Container } from "react-bootstrap";
 
 const Header = () => {
-  const logout = (event) => {
-    event.preventDefault();
-    Auth.logout();
-  };
+  // const logout = (event) => {
+  //   event.preventDefault();
+  //   Auth.logout();
+  // };
   return (
     <div className="header-content">
       <Navbar className="header-height" expand="lg" variant>
@@ -23,7 +23,7 @@ const Header = () => {
               />
             </Link>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             {Auth.loggedIn() ? (
               <>
@@ -38,7 +38,8 @@ const Header = () => {
                 <Link to="/signup">Signup</Link>
               </>
             )}
-          </Navbar.Collapse>
+          </Navbar.Collapse> */}
+          <Navigation />
         </Container>
       </Navbar>
     </div>
