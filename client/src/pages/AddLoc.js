@@ -3,17 +3,17 @@ import { YelpAPI } from "../utils/yelpAPI";
 import { Jumbotron, Container, Col, Form, Button } from "react-bootstrap";
 
 const SearchLocation = () => {
-  const [zipcode, setZipcode] = useState("");
+  const [location, setLocation] = useState("");
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    if (!zipcode) {
+    if (!location) {
       return false;
     }
 
     try {
-      const response = await YelpAPI(zipcode);
+      const response = await YelpAPI(location);
       console.log(response);
 
       if (!response) {
@@ -27,22 +27,22 @@ const SearchLocation = () => {
     <>
       <Jumbotron fluid>
         <Container>
-          <h1>Enter Zipcode</h1>
+          <h1>Enter Location</h1>
           <Form onSubmit={handleFormSubmit}>
             <Form.Row>
               <Col xs={12}>
                 <Form.Control
-                  name="zipcode"
-                  value={zipcode}
-                  onChange={(e) => setZipcode(e.target.value)}
+                  name="location"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="enter zipcode"
+                  placeholder="enter location, address, or city, state"
                 />
               </Col>
               <Col xs={12}>
                 <Button type="submit" variant="success" size="lg">
-                  Submit Zipcode
+                  Submit
                 </Button>
               </Col>
             </Form.Row>
