@@ -1,3 +1,3 @@
-export const Radomizer = (max) => {
-  return Math.floor(Math.random() * max);
+export const Radomizer = () => {
+  return Math.floor(Math.random() * 50);
 };
