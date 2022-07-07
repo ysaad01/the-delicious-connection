@@ -1,8 +1,8 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-import ControlledCarousel from "../components/Carousel";
+
 import Auth from "../utils/auth";
 
+import ControlledCarousel from "../components/ControlledCarousel";
 import SearchLocation from "./AddLoc";
 
 const Landing = () => {
