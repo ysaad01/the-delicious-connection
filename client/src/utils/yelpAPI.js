@@ -16,6 +16,7 @@ export const YelpAPI = (location) => {
       radius: 10000,
       sort_by: "distance",
       limit: 50,
+      // price: 4,
     },
   };
 
