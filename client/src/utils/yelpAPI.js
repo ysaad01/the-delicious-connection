@@ -2,7 +2,7 @@ import axios from "axios";
 const apiKey =
   "D0Rd9FHvHWn0xvzB95YSDVJ0kqaij18PJjRSQGouhBOZM9qaIa6_zXAvvWclApiE2UUeR5Eet_ddhmcQ62_EVoRNLeJ1lLAmB2yYfHROChMWvWt_TbXAVKVFq629YnYx";
 
-export const YelpAPI = (location) => {
+export const YelpAPI = (location, price, radius) => {
   const config = {
     headers: {
       accept: "application/json",
@@ -13,10 +13,10 @@ export const YelpAPI = (location) => {
     params: {
       term: "restaurants",
       location: location,
-      radius: 10000,
+      radius: radius,
       sort_by: "distance",
       limit: 50,
-      // price: 4,
+      price: price,
     },
   };
 
