@@ -8,11 +8,13 @@ const SearchLocation = () => {
   const [price, setPrice] = useState("");
   const [radius, setRadius] = useState("");
   const [calledApi, setCalledApi] = useState(false)
+  const [buttonText, setButtonText] = useState("Search")
 
   let selectedUrl = ''
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    setButtonText('Search Again');
 
     if (!location) {
       return false;
@@ -38,7 +40,8 @@ const SearchLocation = () => {
     <>
       <Jumbotron fluid>
         <Container>
-          <h1>Enter Location</h1>
+          <h1>Restaurant Decision Tool</h1>
+          <h2>Search Options</h2>
           <Form onSubmit={handleFormSubmit}>
             <Form.Row>
               <Col xs={12}>
@@ -48,7 +51,7 @@ const SearchLocation = () => {
                   onChange={(e) => setLocation(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="enter location, address, or city, state"
+                  placeholder="enter a zipcode, address, or city, state"
                 />
               </Col>
               <Col xs={12}></Col>
@@ -63,10 +66,17 @@ const SearchLocation = () => {
                   type="text"
                   size="lg"
                 >
+                  <option value="" selected disabled hidden>Please select your price range</option>
                   <option value="1">$</option>
                   <option value="2">$$</option>
                   <option value="3">$$$</option>
                   <option value="4">$$$$</option>
+                  <option value="1,2">$,$$</option>
+                  <option value="1,2,3">$,$$,$$$</option>
+                  <option value="1,2,3,4">$,$$,$$$,$$$$</option>
+                  <option value="2,3">$$,$$$</option>
+                  <option value="2,3,4">$$,$$$,$$$$</option>
+                  <option value="3,4">$$$,$$$$</option>
                 </Form.Control>
               </Col>
               <Col xs={12}></Col>
@@ -81,6 +91,7 @@ const SearchLocation = () => {
                   type="text"
                   size="lg"
                 >
+                  <option value="" selected disabled hidden>Please select distance from location</option>
                   <option value="1600">1 Mile</option>
                   <option value="3200">2 Miles</option>
                   <option value="8040">5 Miles</option>
@@ -91,7 +102,7 @@ const SearchLocation = () => {
               <Col xs={12}></Col>
             </Form.Row>
             <Button type="submit" variant="success" size="lg">
-              Submit
+            {buttonText}
             </Button>
           </Form>
           {!calledApi ? (
