@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { YelpAPI } from "../utils/yelpAPI";
 import { Jumbotron, Container, Col, Form, Button } from "react-bootstrap";
+import { Randomizer } from "../utils/Randomizer";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState("");
   const [price, setPrice] = useState("");
   const [radius, setRadius] = useState("");
+  const [calledApi, setCalledApi] = useState(false)
+
+  let selectedUrl = ''
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -17,6 +21,11 @@ const SearchLocation = () => {
     try {
       const response = await YelpAPI(location, price, radius);
       console.log(response);
+      const restaurantNum = Randomizer(response.data.businesses.length)
+      selectedUrl = response.data.businesses[restaurantNum].url
+      setCalledApi(selectedUrl)
+      console.log(selectedUrl)
+
 
       if (!response) {
         throw new Error("something went wrong!");
@@ -85,6 +94,17 @@ const SearchLocation = () => {
               Submit
             </Button>
           </Form>
+          {!calledApi ? (
+            <>
+
+            </>
+          ) : (
+            <>
+              <iframe src={calledApi} title="picked-restaurant" className="page-container">
+              </iframe>
+            </>
+          )}
+
         </Container>
       </Jumbotron>
     </>
