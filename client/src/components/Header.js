@@ -14,7 +14,7 @@ const Header = () => {
     <div className="header-content">
       <Navbar className="header-height" expand="lg" variant>
         <Container>
-          <Navbar.Brand href="/">
+          {/* <Navbar.Brand href="/"> */}
             <Link to="/" className="nav-bar">
               <img
                 className="site-logo"
@@ -22,7 +22,7 @@ const Header = () => {
                 alt="site logo"
               />
             </Link>
-          </Navbar.Brand>
+          {/* </Navbar.Brand> */}
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             {Auth.loggedIn() ? (
