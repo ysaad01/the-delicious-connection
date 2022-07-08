@@ -3,7 +3,7 @@ import React from "react";
 import Auth from "../utils/auth";
 
 import ControlledCarousel from "../components/ControlledCarousel";
-import SearchLocation from "./AddLoc";
+import SearchLocation from "./SearchLoc";
 
 const Landing = () => {
   return (
