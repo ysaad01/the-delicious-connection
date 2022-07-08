@@ -5,7 +5,7 @@ import { Jumbotron, Container, Col, Form, Button } from "react-bootstrap";
 const SearchLocation = () => {
   const [location, setLocation] = useState("");
   const [price, setPrice] = useState("");
-  const [radius, setRadius] = useState("")
+  const [radius, setRadius] = useState("");
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -47,26 +47,37 @@ const SearchLocation = () => {
             <Form.Row>
               <Col xs={12}>
                 <Form.Control
+                  as="select"
                   name="price"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="1=$ up to 4=$$$$"
-                />
+                >
+                  <option value="1">$</option>
+                  <option value="2">$$</option>
+                  <option value="3">$$$</option>
+                  <option value="4">$$$$</option>
+                </Form.Control>
               </Col>
               <Col xs={12}></Col>
             </Form.Row>
             <Form.Row>
               <Col xs={12}>
                 <Form.Control
+                  as="select"
                   name="radius"
                   value={radius}
                   onChange={(e) => setRadius(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="distance in meters"
-                />
+                >
+                  <option value="1600">1 Mile</option>
+                  <option value="3200">2 Miles</option>
+                  <option value="8040">5 Miles</option>
+                  <option value="16100">10 Miles</option>
+                  <option value="40000">25 Miles</option>
+                </Form.Control>
               </Col>
               <Col xs={12}></Col>
             </Form.Row>
