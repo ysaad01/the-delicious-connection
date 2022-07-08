@@ -4,6 +4,8 @@ import { Jumbotron, Container, Col, Form, Button } from "react-bootstrap";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState("");
+  const [price, setPrice] = useState("");
+  const [radius, setRadius] = useState("")
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -13,7 +15,7 @@ const SearchLocation = () => {
     }
 
     try {
-      const response = await YelpAPI(location);
+      const response = await YelpAPI(location, price, radius);
       console.log(response);
 
       if (!response) {
@@ -40,12 +42,37 @@ const SearchLocation = () => {
                   placeholder="enter location, address, or city, state"
                 />
               </Col>
-              <Col xs={12}>
-                <Button type="submit" variant="success" size="lg">
-                  Submit
-                </Button>
-              </Col>
+              <Col xs={12}></Col>
             </Form.Row>
+            <Form.Row>
+              <Col xs={12}>
+                <Form.Control
+                  name="price"
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                  type="text"
+                  size="lg"
+                  placeholder="1=$ up to 4=$$$$"
+                />
+              </Col>
+              <Col xs={12}></Col>
+            </Form.Row>
+            <Form.Row>
+              <Col xs={12}>
+                <Form.Control
+                  name="radius"
+                  value={radius}
+                  onChange={(e) => setRadius(e.target.value)}
+                  type="text"
+                  size="lg"
+                  placeholder="distance in meters"
+                />
+              </Col>
+              <Col xs={12}></Col>
+            </Form.Row>
+            <Button type="submit" variant="success" size="lg">
+              Submit
+            </Button>
           </Form>
         </Container>
       </Jumbotron>
