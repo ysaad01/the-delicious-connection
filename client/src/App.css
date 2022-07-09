@@ -24,12 +24,10 @@
   width: 750px;
 }
 
-
-
 #review {
   top: auto;
   left: auto;
-  position: absolute;
+  margin-bottom: 5rem;
 }
 
 #reviewer {
