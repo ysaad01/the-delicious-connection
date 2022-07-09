@@ -9,6 +9,7 @@ const SearchLocation = () => {
   const [radius, setRadius] = useState("");
   const [calledApi, setCalledApi] = useState(false)
   const [buttonText, setButtonText] = useState("Search")
+  const [restaurantLength, setRestaurantLength] = useState(false)
 
   let selectedUrl = ''
 
@@ -23,10 +24,17 @@ const SearchLocation = () => {
     try {
       const response = await YelpAPI(location, price, radius);
       console.log(response);
-      const restaurantNum = Randomizer(response.data.businesses.length)
-      selectedUrl = response.data.businesses[restaurantNum].url
-      setCalledApi(selectedUrl)
-      console.log(selectedUrl)
+      console.log(response.data.businesses.length)
+
+      if (response.data.businesses.length === 0) {
+        setRestaurantLength(true);
+      } else {
+        const restaurantNum = Randomizer(response.data.businesses.length)
+        selectedUrl = response.data.businesses[restaurantNum].url
+        setCalledApi(selectedUrl)
+        console.log(selectedUrl)
+        setRestaurantLength(false);
+      };
 
 
       if (!response) {
@@ -102,9 +110,21 @@ const SearchLocation = () => {
               <Col xs={12}></Col>
             </Form.Row>
             <Button type="submit" variant="success" size="lg">
-            {buttonText}
+              {buttonText}
             </Button>
           </Form>
+
+          {!restaurantLength ? (
+            <>
+
+            </>
+          ) : (
+            <>
+              <h4>No restaurants fit your search criteria. Please try again.</h4>
+            </>
+          )}
+
+
           {!calledApi ? (
             <>
 
