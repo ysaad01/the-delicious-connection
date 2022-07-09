@@ -1,6 +1,6 @@
 import axios from "axios";
-const apiKey =
-  "D0Rd9FHvHWn0xvzB95YSDVJ0kqaij18PJjRSQGouhBOZM9qaIa6_zXAvvWclApiE2UUeR5Eet_ddhmcQ62_EVoRNLeJ1lLAmB2yYfHROChMWvWt_TbXAVKVFq629YnYx";
+
+const apiKey = process.env.REACT_APP_API_KEY
 
 export const YelpAPI = (location, price, radius) => {
   const config = {
