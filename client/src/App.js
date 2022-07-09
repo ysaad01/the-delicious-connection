@@ -44,9 +44,9 @@ function App() {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />
         </Routes>
-        <div className="page-container">{/* <SearchLocation /> */}</div>
+
+        <Footer />
       </div>
-      <Footer />
     </ApolloProvider>
   );
 }
