@@ -24,8 +24,16 @@
   width: 750px;
 }
 
-#caption {
-  top: 50%;
+
+
+#review {
+  top: auto;
+  left: auto;
+  position: absolute;
+}
+
+#reviewer {
+  bottom: 0%;
   left: auto;
   position: absolute;
 }
