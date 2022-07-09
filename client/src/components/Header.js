@@ -12,7 +12,7 @@ const Header = () => {
           <Link to="/" className="nav-bar">
             <img
               className="site-logo"
-              src={`${process.env.PUBLIC_URL}/images/site-logo.png`}
+              src={`${process.env.PUBLIC_URL}/images/dc-logo.png`}
               alt="site logo"
             />
           </Link>
