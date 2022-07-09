@@ -3,6 +3,7 @@ import React from "react";
 import Auth from "../utils/auth";
 
 import Carousel from "../components/Carousel1";
+import About from "../components/About";
 import SearchLocation from "./SearchLoc";
 
 const Landing = () => {
@@ -15,11 +16,17 @@ const Landing = () => {
           </>
         ) : (
           <>
-          <div id="overlap">
-          <h1>We've helped these hangry people</h1>
-            <Carousel />
-          <h2>lets help you too</h2>
-          </div>
+            <div className="d-flex justify-content-center">
+              <div
+                id="overlap"
+                style={{ display: "block", width: 700, padding: 30 }}
+              >
+                <About />
+                <h2>We've helped these hangry people</h2>
+                <Carousel />
+                <h3>lets help you too</h3>
+              </div>
+            </div>
           </>
         )}
       </div>

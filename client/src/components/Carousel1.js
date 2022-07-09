@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 
 const Carousel1 = () => {
   return (
-    <Carousel>
+    <Carousel infinite fade variant="dark" controls="false" nextLabel={null} prevLabel={null}>
       <Carousel.Item>
         <img
           className="d-block w-100 h-50"
