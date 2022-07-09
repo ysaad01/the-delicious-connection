@@ -20,7 +20,7 @@ const Carousel = () => {
         <div id="quote-container">
           <img
             className="d-block w-75 daily-quote-image"
-            src={`${process.env.PUBLIC_URL}/images/img4.jpg`}
+            src={`${process.env.PUBLIC_URL}/images/ali.jpg`}
             alt="First slide"
           />
           <h3 id="caption">
@@ -37,7 +37,7 @@ const Carousel = () => {
         <div id="quote-container">
           <img
             className="d-block w-75 daily-quote-image"
-            src={`${process.env.PUBLIC_URL}/images/img3.jpeg`}
+            src={`${process.env.PUBLIC_URL}/images/moe.jpg`}
             alt="second slide"
           />
           <h3 id="caption">
@@ -55,7 +55,7 @@ const Carousel = () => {
         <div id="quote-container">
           <img
             className="d-block w-75 daily-quote-image"
-            src={`${process.env.PUBLIC_URL}/images/img4.jpg`}
+            src={`${process.env.PUBLIC_URL}/images/bryant.jpg`}
             alt="third slide"
           />
           <h3 id="caption">
@@ -71,7 +71,7 @@ const Carousel = () => {
         <div id="quote-container">
           <img
             className="d-block w-75 daily-quote-image"
-            src={`${process.env.PUBLIC_URL}/images/img3.jpeg`}
+            src={`${process.env.PUBLIC_URL}/images/garth.jpg`}
             alt="fourth slide"
           />
           <h3 id="caption">
@@ -88,12 +88,13 @@ const Carousel = () => {
         <div id="quote-container">
           <img
             className="d-block w-75 daily-quote-image"
-            src={`${process.env.PUBLIC_URL}/images/img4.jpg`}
+            src={`${process.env.PUBLIC_URL}/images/mason.jpg`}
             alt="fifth slide"
           />
           <h3 id="caption">
-            I've got a fetish for good food so this app gets me hot! Very easy to use.
-            Love the ability to search based on price and distance to really tailor to what I want.
+            I've got a fetish for good food so this app gets me hot! Very easy
+            to use. Love the ability to search based on price and distance to
+            really tailor to what I want.
           </h3>
           <h4>Mason B.</h4>
         </div>
