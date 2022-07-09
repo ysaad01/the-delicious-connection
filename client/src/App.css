@@ -18,6 +18,7 @@
   min-height: calc(100vh - 400px);
 }
 
+/* CAROUSEL REVIEWS STYLING */
 #overlap {
   position: relative;
   color: #000;
@@ -47,6 +48,11 @@
 .daily-quote-image {
   max-height: 490px;
   min-width: 100%;
+}
+
+/* LOGIN PAGE STYLING */
+#login-form {
+  padding: 5rem;
 }
 
 /* FOOTER STYLING */
