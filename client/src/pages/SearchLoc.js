@@ -125,6 +125,11 @@ const SearchLocation = () => {
               {buttonText}
             </Button>
           </Form>
+          {!loading ? (
+            handleFormSubmit
+          ) : (
+            <ReactBootStrap.Spinner animation="border" />
+          )}
 
           {!restaurantLength ? (
             <></>
@@ -146,11 +151,6 @@ const SearchLocation = () => {
                 className="page-container"
               ></iframe>
             </>
-          )}
-          {loading ? (
-            handleFormSubmit
-          ) : (
-            <ReactBootStrap.Spinner animation="border" />
           )}
         </Container>
       </Jumbotron>
