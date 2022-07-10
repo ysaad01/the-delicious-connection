@@ -17,7 +17,12 @@
   justify-content: center;
   min-height: calc(100vh - 400px);
 }
+/* NAV STYLING */
+#nav-buttons {
+  margin-right: 1rem;
+}
 
+/* CAROUSEL REVIEWS STYLING */
 #overlap {
   position: relative;
   color: #000;
@@ -52,6 +57,12 @@
 .daily-quote-image {
   max-height: 490px;
   min-width: 100%;
+}
+
+/* LOGIN AND SIGN UP PAGE STYLING */
+#login-form,
+#signup-form {
+  padding: 5rem;
 }
 
 /* FOOTER STYLING */
