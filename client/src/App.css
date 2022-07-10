@@ -45,6 +45,11 @@ h4 {
   background-size: contain;
 }
 
+iframe {
+  background-color: whitesmoke;
+  border-radius: 7px;
+}
+
 /* CAROUSEL REVIEWS STYLING */
 #overlap {
   position: relative;
