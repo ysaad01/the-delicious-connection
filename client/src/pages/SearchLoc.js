@@ -25,6 +25,7 @@ const SearchLocation = () => {
 
     try {
       const response = await YelpAPI(location, price, radius);
+      setLoading(true);
       console.log(response);
       console.log(response.data.businesses.length);
 
@@ -41,7 +42,7 @@ const SearchLocation = () => {
       if (!response) {
         throw new Error("something went wrong!");
       }
-      setLoading(true);
+      setLoading(false);
     } catch (err) {
       console.error(err);
     }
