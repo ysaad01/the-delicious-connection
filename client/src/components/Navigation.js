@@ -11,23 +11,25 @@ const Navigation = () => {
   return (
     <div className="nav-content">
       <Row>
-        <Nav className="me-auto nav-bar" id="basic-navbar-nav">
+        <Nav className="me-auto nav-bar">
           {Auth.loggedIn() ? (
             <>
               <Link to="/" />
-              <a href="/" className="btn btn-outline-dark" onClick={logout}>
+              <a href="/" className="btn btn-warning" onClick={logout}>
                 Logout
               </a>
             </>
           ) : (
-            <>
-              <Link to="/login" className="btn btn-outline-dark">
-                Login
-              </Link>
-              <Link to="/signup" className="btn btn-outline-dark">
-                Signup
-              </Link>
-            </>
+            <div className="nav-buttons">
+              <>
+                <Link to="/login" id="nav-buttons" className="btn btn-warning">
+                  Login
+                </Link>
+                <Link to="/signup" className="btn btn-warning">
+                  Signup
+                </Link>
+              </>
+            </div>
           )}
         </Nav>
       </Row>
