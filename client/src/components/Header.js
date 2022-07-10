@@ -11,8 +11,8 @@ const Header = () => {
         <Container>
           <Link to="/" className="nav-bar">
             <img
-              className="site-logo"
-              src={`${process.env.PUBLIC_URL}/images/site-logo.png`}
+              className="App-logo"
+              src={`${process.env.PUBLIC_URL}/images/site-logo1.png`}
               alt="site logo"
             />
           </Link>
