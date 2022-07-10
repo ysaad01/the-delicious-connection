@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:wght@400;700&display=swap");
+
 /* GENERAL STYLING */
 * {
   margin: 0;
@@ -5,9 +7,17 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Audiowide", cursive;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
 .App {
   text-align: center;
-  background: url(../public/images/background.jpeg);
+  background: url(../public/images/background.jpeg) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -17,9 +27,27 @@
   justify-content: center;
   min-height: calc(100vh - 400px);
 }
+
+h4 {
+  font-size: 1.75rem;
+}
+
 /* NAV STYLING */
 #nav-buttons {
   margin-right: 1rem;
+}
+/* LANDING STYLING */
+
+/* ABOUT STYLING */
+
+.about {
+  background-color: #f0872b;
+  background-size: contain;
+}
+
+iframe {
+  background-color: whitesmoke;
+  border-radius: 7px;
 }
 
 /* CAROUSEL REVIEWS STYLING */
@@ -75,7 +103,6 @@
 }
 
 .App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
