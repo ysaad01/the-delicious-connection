@@ -7,22 +7,8 @@ import About from "../components/About";
 import SearchLocation from "./SearchLoc";
 
 import Typewriter from "typewriter-effect";
-// import { onInit } from "typewriter-effect"
-// import { useEffect, useRef } from "react";
-
 
 const Landing = () => {
-  // const feeling = useRef();
-
-  // useEffect(() => {
-  //   onInit(feeling.current, {
-  //     showCursor: true,
-  //     backDelay: 1500,
-  //     backSpeed: 60,
-  //     strings: ["leader", "passionate team member", "dedicated worker"],
-  //   });
-  // }, []);
-
   return (
     <div>
       <div>
