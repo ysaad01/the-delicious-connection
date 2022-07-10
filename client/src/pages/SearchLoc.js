@@ -17,6 +17,7 @@ const SearchLocation = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     setButtonText("Search Again");
 
     if (!location) {
@@ -25,7 +26,6 @@ const SearchLocation = () => {
 
     try {
       const response = await YelpAPI(location, price, radius);
-      setLoading(true);
       console.log(response);
       console.log(response.data.businesses.length);
 
@@ -126,7 +126,7 @@ const SearchLocation = () => {
             </Button>
           </Form>
           {!loading ? (
-            handleFormSubmit
+            <></>
           ) : (
             <ReactBootStrap.Spinner animation="border" />
           )}
