@@ -27,13 +27,18 @@
 #review {
   top: auto;
   left: auto;
-  margin-bottom: 5rem;
+  margin-bottom: auto;
+  color: #000;
+  font-weight: bold;
+  background-color: white;
+  opacity: 75%;
 }
 
 #reviewer {
-  bottom: 0%;
-  left: auto;
-  position: absolute;
+  bottom: 10%;
+  color: #000;
+  margin-bottom: auto;
+  text-indent: 10rem;
 }
 
 #quote-container {

@@ -6,7 +6,23 @@ import Carousel from "../components/Carousel1";
 import About from "../components/About";
 import SearchLocation from "./SearchLoc";
 
+import Typewriter from "typewriter-effect";
+// import { onInit } from "typewriter-effect"
+// import { useEffect, useRef } from "react";
+
+
 const Landing = () => {
+  // const feeling = useRef();
+
+  // useEffect(() => {
+  //   onInit(feeling.current, {
+  //     showCursor: true,
+  //     backDelay: 1500,
+  //     backSpeed: 60,
+  //     strings: ["leader", "passionate team member", "dedicated worker"],
+  //   });
+  // }, []);
+
   return (
     <div>
       <div>
@@ -22,9 +38,22 @@ const Landing = () => {
                 style={{ display: "block", width: 700, padding: 30 }}
               >
                 <About />
-                <h2>We've helped these hangry people</h2>
+                <h4>
+                  We've helped these&nbsp;
+                  <Typewriter
+                    options={{
+                      strings: ["hangry", "indecisive", "picky", "hesitant"],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                    onInit={(typewriter) => {
+                      typewriter.start();
+                    }}
+                  />
+                  people
+                </h4>
                 <Carousel />
-                <h3>lets help you too</h3>
+                <h5>lets help you too</h5>
               </div>
             </div>
           </>
