@@ -77,12 +77,13 @@ const SearchLocation = () => {
                 <Form.Control
                   as="select"
                   name="price"
-                  value={price}
+                  // value={price}
+                  defaultValue=""
                   onChange={(e) => setPrice(e.target.value)}
                   type="text"
                   size="lg"
                 >
-                  <option value="" selected disabled hidden>
+                  <option value="" disabled hidden>
                     Please select your price range
                   </option>
                   <option value="1">$</option>
@@ -104,12 +105,13 @@ const SearchLocation = () => {
                 <Form.Control
                   as="select"
                   name="radius"
-                  value={radius}
+                  // value={radius}
+                  defaultValue=""
                   onChange={(e) => setRadius(e.target.value)}
                   type="text"
                   size="lg"
                 >
-                  <option value="" selected disabled hidden>
+                  <option value="" disabled hidden>
                     Please select distance from location
                   </option>
                   <option value="1600">1 Mile</option>
