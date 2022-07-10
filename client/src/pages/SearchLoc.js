@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { YelpAPI } from "../utils/yelpAPI";
 import { Jumbotron, Container, Col, Form, Button } from "react-bootstrap";
 import { Randomizer } from "../utils/Randomizer";
+import * as ReactBootStrap from "react-bootstrap";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState("");
   const [price, setPrice] = useState("");
   const [radius, setRadius] = useState("");
-  const [calledApi, setCalledApi] = useState(false)
-  const [buttonText, setButtonText] = useState("Search")
-  const [restaurantLength, setRestaurantLength] = useState(false)
+  const [calledApi, setCalledApi] = useState(false);
+  const [buttonText, setButtonText] = useState("Search");
+  const [restaurantLength, setRestaurantLength] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  let selectedUrl = ''
+  let selectedUrl = "";
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    setButtonText('Search Again');
+    setButtonText("Search Again");
 
     if (!location) {
       return false;
@@ -24,26 +26,31 @@ const SearchLocation = () => {
     try {
       const response = await YelpAPI(location, price, radius);
       console.log(response);
-      console.log(response.data.businesses.length)
+      console.log(response.data.businesses.length);
 
       if (response.data.businesses.length === 0) {
         setRestaurantLength(true);
       } else {
-        const restaurantNum = Randomizer(response.data.businesses.length)
-        selectedUrl = response.data.businesses[restaurantNum].url
-        setCalledApi(selectedUrl)
-        console.log(selectedUrl)
+        const restaurantNum = Randomizer(response.data.businesses.length);
+        selectedUrl = response.data.businesses[restaurantNum].url;
+        setCalledApi(selectedUrl);
+        console.log(selectedUrl);
         setRestaurantLength(false);
-      };
-
+      }
 
       if (!response) {
         throw new Error("something went wrong!");
       }
+      setLoading(true);
     } catch (err) {
       console.error(err);
     }
   };
+
+  useEffect(() => {
+    handleFormSubmit();
+  });
+
   return (
     <>
       <Jumbotron fluid>
@@ -74,7 +81,9 @@ const SearchLocation = () => {
                   type="text"
                   size="lg"
                 >
-                  <option value="" selected disabled hidden>Please select your price range</option>
+                  <option value="" selected disabled hidden>
+                    Please select your price range
+                  </option>
                   <option value="1">$</option>
                   <option value="2">$$</option>
                   <option value="3">$$$</option>
@@ -99,7 +108,9 @@ const SearchLocation = () => {
                   type="text"
                   size="lg"
                 >
-                  <option value="" selected disabled hidden>Please select distance from location</option>
+                  <option value="" selected disabled hidden>
+                    Please select distance from location
+                  </option>
                   <option value="1600">1 Mile</option>
                   <option value="3200">2 Miles</option>
                   <option value="8040">5 Miles</option>
@@ -115,27 +126,31 @@ const SearchLocation = () => {
           </Form>
 
           {!restaurantLength ? (
-            <>
-
-            </>
+            <></>
           ) : (
             <>
-              <h4>No restaurants fit your search criteria. Please try again.</h4>
+              <h4>
+                No restaurants fit your search criteria. Please try again.
+              </h4>
             </>
           )}
-
 
           {!calledApi ? (
-            <>
-
-            </>
+            <></>
           ) : (
             <>
-              <iframe src={calledApi} title="picked-restaurant" className="page-container">
-              </iframe>
+              <iframe
+                src={calledApi}
+                title="picked-restaurant"
+                className="page-container"
+              ></iframe>
             </>
           )}
-
+          {loading ? (
+            handleFormSubmit
+          ) : (
+            <ReactBootStrap.Spinner animation="border" />
+          )}
         </Container>
       </Jumbotron>
     </>
