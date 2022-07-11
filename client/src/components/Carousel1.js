@@ -20,10 +20,10 @@ const Carousel1 = () => {
         people
       </h4>
       <Carousel
-        infinite
+        infinite="true"
         fade
         variant="dark"
-        controls="false"
+        // controls="false"
         nextLabel={null}
         prevLabel={null}
       >
