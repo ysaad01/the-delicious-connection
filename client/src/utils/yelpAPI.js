@@ -22,7 +22,7 @@ export const YelpAPI = (location, price, radius) => {
 
   return axios
     .get(
-      "https://api.yelp.com/v3/businesses/search",
+      "https://whispering-tor-20320.herokuapp.com/https://api.yelp.com/v3/businesses/search",
       config
     )
 }
