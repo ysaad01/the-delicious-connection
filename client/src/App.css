@@ -42,9 +42,12 @@ h4 {
 
 /* ABOUT STYLING */
 
-.about {
-  background-color: #f0872b;
-  background-size: contain;
+/* #about {
+  color: #000;
+} */
+
+#about-card {
+  background-color: rgba(234, 97, 43, 0.75);
 }
 
 iframe {
@@ -52,10 +55,6 @@ iframe {
   border-radius: 7px;
 }
 
-/* CAROUSEL STYLING */
-.typewriter {
-  background-color: #213742;
-}
 #overlap {
   position: relative;
   color: #000;
@@ -66,10 +65,9 @@ iframe {
   top: auto;
   left: auto;
   margin-bottom: auto;
-  color: #000;
+  color: #fff;
   font-weight: bold;
-  background-color: white;
-  opacity: 75%;
+  background-color: rgba(33, 55, 66, 0.9);
 }
 
 #reviewer {
