@@ -36,7 +36,6 @@ h4 {
 #nav-buttons {
   margin-right: 1rem;
 }
-/* LANDING STYLING */
 
 /* ABOUT STYLING */
 
@@ -93,6 +92,16 @@ iframe {
   padding: 5rem;
 }
 
+/* SEARCH ENGINE STYLING  */
+.search-loc {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* .yelp-box {
+  display: flex;
+  justify-content: flex-end;
+} */
 /* FOOTER STYLING */
 
 /* MEDIA QUERY */
