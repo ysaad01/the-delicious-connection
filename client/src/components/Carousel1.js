@@ -7,16 +7,18 @@ const Carousel1 = () => {
     <div>
       <h4>
         We've helped these&nbsp;
-        <Typewriter
-          options={{
-            strings: ["HANGRY", "Indecisive", "Picky", "Hesitant"],
-            autoStart: true,
-            loop: true,
-          }}
-          onInit={(typewriter) => {
-            typewriter.start();
-          }}
-        />
+        <div className="typewriter">
+          <Typewriter
+            options={{
+              strings: ["HANGRY", "Indecisive", "Picky", "Hesitant"],
+              autoStart: true,
+              loop: true,
+            }}
+            onInit={(typewriter) => {
+              typewriter.start();
+            }}
+          />
+        </div>
         people
       </h4>
       <Carousel
