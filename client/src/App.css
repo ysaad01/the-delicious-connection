@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:wght@400;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 
 /* GENERAL STYLING */
 * {
@@ -8,8 +10,7 @@
 }
 
 body {
-  font-family: "Audiowide", cursive;
-  /* font-family: 'Open Sans', sans-serif; */
+  font-family: "Chelsea Market", cursive;
 }
 
 .App {
@@ -32,12 +33,14 @@ h4 {
   font-size: calc(1.125rem + 0.9vw);
   justify-content: center;
 }
+.app-title {
+  margin-right: 7.5px;
+}
 
 /* NAV STYLING */
 #nav-buttons {
   margin-right: 1rem;
 }
-/* LANDING STYLING */
 
 /* ABOUT STYLING */
 
@@ -91,7 +94,13 @@ iframe {
 /* LOGIN AND SIGN UP PAGE STYLING */
 #login-form,
 #signup-form {
-  padding: 5rem;
+  padding: 4.5rem;
+}
+
+/* SEARCH ENGINE STYLING  */
+.search-loc {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* FOOTER STYLING */
@@ -99,8 +108,6 @@ iframe {
 .footerImg {
   max-width: 125px;
 }
-
-
 
 /* MEDIA QUERY */
 @media (prefers-reduced-motion: no-preference) {
@@ -142,14 +149,14 @@ iframe {
   }
 
   h3 {
-    font-size: calc(.75rem + 0.125vw);
+    font-size: calc(0.75rem + 0.125vw);
   }
 
   p {
-    font-size: calc(.625rem + 0.125vw);
+    font-size: calc(0.625rem + 0.125vw);
   }
 
-    .App-logo {
-      max-width: 150px;
-    }
+  .App-logo {
+    max-width: 150px;
+  }
 }
