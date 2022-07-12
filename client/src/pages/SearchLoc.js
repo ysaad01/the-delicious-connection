@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { YelpAPI } from "../utils/yelpAPI";
 import { Jumbotron, Container, Col, Form, Button, Row } from "react-bootstrap";
 import { Randomizer } from "../utils/Randomizer";
@@ -48,10 +48,6 @@ const SearchLocation = () => {
       console.error(err);
     }
   };
-
-  useEffect(() => {
-    handleFormSubmit();
-  });
 
   return (
     <>
