@@ -16,6 +16,9 @@ const Header = () => {
               alt="site logo"
             />
           </Link>
+          <div className="app-title">
+            <h1>The Delicious Connection</h1>
+          </div>
           <Navigation />
         </Container>
       </Navbar>
