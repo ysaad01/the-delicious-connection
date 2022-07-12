@@ -29,7 +29,8 @@ body {
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: calc(1.125rem + 0.9vw);
+  justify-content: center;
 }
 
 /* NAV STYLING */
@@ -95,6 +96,12 @@ iframe {
 
 /* FOOTER STYLING */
 
+.footerImg {
+  max-width: 125px;
+}
+
+
+
 /* MEDIA QUERY */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -122,4 +129,27 @@ iframe {
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 575px) {
+  h1 {
+    padding-top: 6.5px;
+  }
+
+  h4 {
+    font-size: calc(1rem + 0.125vw);
+    justify-content: center;
+  }
+
+  h3 {
+    font-size: calc(.75rem + 0.125vw);
+  }
+
+  p {
+    font-size: calc(.625rem + 0.125vw);
+  }
+
+    .App-logo {
+      max-width: 150px;
+    }
 }
