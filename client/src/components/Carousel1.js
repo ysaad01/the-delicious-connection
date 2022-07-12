@@ -9,7 +9,7 @@ const Carousel1 = () => {
         We've helped these&nbsp;
         <Typewriter
           options={{
-            strings: ["hangry", "indecisive", "picky", "hesitant"],
+            strings: ["HANGRY", "Indecisive", "Picky", "Hesitant"],
             autoStart: true,
             loop: true,
           }}

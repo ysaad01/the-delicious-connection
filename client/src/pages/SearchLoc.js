@@ -3,7 +3,7 @@ import { YelpAPI } from "../utils/yelpAPI";
 import { Jumbotron, Container, Col, Form, Button, Row } from "react-bootstrap";
 import { Randomizer } from "../utils/Randomizer";
 // import * as ReactBootStrap from "react-bootstrap";
-import ClipLoader from "react-spinners/ClipLoader";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState("");
@@ -140,33 +140,42 @@ const SearchLocation = () => {
               </Form>
             </Col>
             <Col>
-              {!loading ? (
-                <></>
-              ) : (
-                <ClipLoader color={"#ffff"} loading={loading} size={150} />
-              )}
+              <Row className="mb-3">
+                {!loading ? (
+                  <></>
+                ) : (
+                  <div className="d-flex justify-content-center">
+                    <ClimbingBoxLoader
+                      color={"#ffff"}
+                      loading={loading}
+                      size={25}
+                    />
+                  </div>
+                )}
+              </Row>
+              <Row>
+                {!restaurantLength ? (
+                  <></>
+                ) : (
+                  <>
+                    <h4>
+                      No restaurants fit your search criteria. Please try again.
+                    </h4>
+                  </>
+                )}
 
-              {!restaurantLength ? (
-                <></>
-              ) : (
-                <>
-                  <h4>
-                    No restaurants fit your search criteria. Please try again.
-                  </h4>
-                </>
-              )}
-
-              {!calledApi ? (
-                <></>
-              ) : (
-                <>
-                  <iframe
-                    src={calledApi}
-                    title="picked-restaurant"
-                    className="page-container"
-                  ></iframe>
-                </>
-              )}
+                {!calledApi ? (
+                  <></>
+                ) : (
+                  <>
+                    <iframe
+                      src={calledApi}
+                      title="picked-restaurant"
+                      className="page-container"
+                    ></iframe>
+                  </>
+                )}
+              </Row>
             </Col>
           </Row>
         </Container>
