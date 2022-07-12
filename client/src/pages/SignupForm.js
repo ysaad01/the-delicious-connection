@@ -57,8 +57,8 @@ const SignupForm = () => {
   return (
     <Col>
       <h4>Signup</h4>
-      <div className="d-flex justify-content-center">
-        <div className="card border-dark" id="signup-form">
+      <div className="d-flex justify-content-center" id="signup-form">
+        <div className="card" id="signup-card">
           {/* This is needed for the validation functionality above */}
           <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
             {/* show alert if server response is bad */}
@@ -116,6 +116,8 @@ const SignupForm = () => {
               </Form.Control.Feedback>
             </Form.Group>
             <Button
+              className="mt-3"
+              id="submit-button"
               disabled={
                 !(
                   userFormData.username &&
@@ -124,7 +126,6 @@ const SignupForm = () => {
                 )
               }
               type="submit"
-              variant="success"
             >
               Submit
             </Button>

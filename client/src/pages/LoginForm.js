@@ -54,7 +54,7 @@ const LoginForm = () => {
     <Col>
       <h4>Login</h4>
       <div className="d-flex justify-content-center" id="login-form">
-        <div className="card border-dark" id="login-form">
+        <div className="card" id="login-card">
           <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
             <Alert
               dismissible
@@ -96,8 +96,7 @@ const LoginForm = () => {
             <Button
               disabled={!(userFormData.email && userFormData.password)}
               type="submit"
-              variant="success"
-              className="mt-3 btn btn-danger"
+              className="submit-button mt-3"
             >
               Submit
             </Button>

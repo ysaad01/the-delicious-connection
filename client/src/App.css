@@ -10,6 +10,9 @@
 body {
   font-family: "Chelsea Market", cursive;
 }
+label {
+  color: #fff;
+}
 
 .App {
   text-align: center;
@@ -96,6 +99,16 @@ iframe {
   padding: 4.5rem;
 }
 
+#login-card,
+#signup-card {
+  padding: 5.5rem;
+  background-color: rgba(33, 55, 66, 0.6);
+}
+
+.submit-button,
+#submit-button {
+  background-color: rgba(234, 97, 43, 0.75);
+}
 /* SEARCH ENGINE STYLING  */
 .search-loc {
   display: flex;
