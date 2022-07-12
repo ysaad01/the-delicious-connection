@@ -42,6 +42,7 @@ Run the below command to start the application:
 - [**Matt Jerich**](https://github.com/MJerich)
 - [**Robert Prusinowski**](https://github.com/bobpruz)
 - [**William Strothe**](https://github.com/wwstrothe)
+- [**Yasmine Saad**](https://github.com/ysaad01)
 
 ## [Questions](#table-of-contents)
 

@@ -4,11 +4,7 @@ import { Jumbotron, Container } from "react-bootstrap";
 const About = () => {
   return (
     <Jumbotron fluid className="d-flex justify-content-center">
-      <div
-        id="about-card"
-        className="card border-warning mb-3"
-        style={{ maxWidth: "48rem" }}
-      >
+      <div id="about-card" className="card border-warning mb-3">
         <Container>
           <h2 id="about">Why Delicious Connection?</h2>
 

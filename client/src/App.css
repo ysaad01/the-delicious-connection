@@ -47,7 +47,7 @@ h4 {
 } */
 
 #about-card {
-  background-color: rgba(33, 55, 66, 0.9);
+  background-color: rgba(234, 97, 43, 0.75);
 }
 
 iframe {
@@ -55,10 +55,6 @@ iframe {
   border-radius: 7px;
 }
 
-/* CAROUSEL STYLING */
-.typewriter {
-  background-color: rgba(234, 97, 43, 0.75);
-}
 #overlap {
   position: relative;
   color: #000;
