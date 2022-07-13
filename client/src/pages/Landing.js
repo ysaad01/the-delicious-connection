@@ -1,5 +1,5 @@
 import React from "react";
-import { Row } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import Auth from "../utils/auth";
 
@@ -18,20 +18,22 @@ const Landing = () => {
         ) : (
           <>
             <div>
-              <Row>
-                <About />
-              </Row>
-              <div className="d-flex justify-content-center">
-                <div
-                  id="overlap"
-                  style={{ display: "block", width: 700, padding: 30 }}
-                >
-                  <Row>
-                    <Carousel />
-                    <h4>Lets Help You Too</h4>
-                  </Row>
+              <Col>
+                <Row>
+                  <About />
+                </Row>
+                <div className="d-flex justify-content-center">
+                  <div
+                    id="overlap"
+                    style={{ display: "block", width: 700, padding: 30 }}
+                  >
+                    <Row>
+                      <Carousel />
+                      <h4>Lets Help You Too</h4>
+                    </Row>
+                  </div>
                 </div>
-              </div>
+              </Col>
             </div>
           </>
         )}

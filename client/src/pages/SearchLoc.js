@@ -53,8 +53,7 @@ const SearchLocation = () => {
     <>
       <Jumbotron fluid>
         <Container>
-          <h1>Restaurant Decision Tool</h1>
-          <h2>Search Options</h2>
+          <h3>Restaurant Decision Tool</h3>
           <Row className="yelp-box">
             <Col xs={12} md={6} lg={4} xl={4} className="search-loc">
               <Form onSubmit={handleFormSubmit}>
@@ -67,7 +66,7 @@ const SearchLocation = () => {
                       onChange={(e) => setLocation(e.target.value)}
                       type="text"
                       size="lg"
-                      placeholder="Enter a Zipcode, Address, or City, State"
+                      placeholder="Zipcode or Address"
                     />
                   </Col>
                   <Col xs={12}></Col>
