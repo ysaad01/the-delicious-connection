@@ -52,7 +52,7 @@ const LoginForm = () => {
 
   return (
     <Col>
-      <h4>Login</h4>
+      <h2>Login</h2>
       <div className="d-flex justify-content-center" id="login-form">
         <div className="card" id="login-card">
           <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -97,6 +97,7 @@ const LoginForm = () => {
               disabled={!(userFormData.email && userFormData.password)}
               type="submit"
               className="submit-button mt-3"
+              variant="secondary"
             >
               Submit
             </Button>

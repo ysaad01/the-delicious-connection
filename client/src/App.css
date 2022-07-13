@@ -37,17 +37,15 @@ h4 {
 .app-title {
   margin-right: 7.5px;
 }
-
 /* NAV STYLING */
 #nav-buttons {
   margin-right: 1rem;
 }
+.nav-content {
+  align-items: center;
+}
 
 /* ABOUT STYLING */
-
-/* #about {
-  color: #000;
-} */
 
 #about-card {
   background-color: rgba(234, 97, 43, 0.75);
@@ -115,6 +113,11 @@ iframe {
   justify-content: space-evenly;
 }
 
+.search-steps {
+  background-color: rgba(33, 55, 66, 0.6);
+  padding: 2.55rem;
+}
+
 /* FOOTER STYLING */
 
 .footerImg {
@@ -150,25 +153,36 @@ iframe {
   }
 }
 
-@media screen and (max-width: 575px) {
-  h1 {
-    padding-top: 6.5px;
-  }
-
-  h4 {
-    font-size: calc(1rem + 0.125vw);
-    justify-content: center;
-  }
-
-  h3 {
-    font-size: calc(0.75rem + 0.125vw);
-  }
-
-  p {
-    font-size: calc(0.625rem + 0.125vw);
-  }
-
-  .App-logo {
-    max-width: 150px;
-  }
+@media screen and (max-width: 991px) {
+    h1 {
+        padding-top: 6.5px;
+      }
+    
+      h4 {
+        font-size: calc(1rem + 0.125vw);
+        justify-content: center;
+      }
+    
+      h3 {
+        font-size: calc(0.75rem + 0.125vw);
+      }
+    
+      p {
+        font-size: calc(0.625rem + 0.125vw);
+      }
+    
+      .App-logo {
+        max-width: 150px;
+      }
+    
+      .container {
+        flex-direction: column
+      }
+    
+      #login-card,
+      #signup-card {
+        padding: 1.5rem
+      }
 }
+
+

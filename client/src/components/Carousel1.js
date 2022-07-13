@@ -10,7 +10,7 @@ const Carousel1 = () => {
         <div className="typewriter">
           <Typewriter
             options={{
-              strings: ["HANGRY", "Indecisive", "Picky", "Hesitant"],
+              strings: ["HANGRY", "indecisive", "picky", "hesitant"],
               autoStart: true,
               loop: true,
             }}
@@ -25,7 +25,7 @@ const Carousel1 = () => {
         infinite="true"
         fade
         variant="dark"
-        // controls="false"
+        interval={8000}
         nextLabel={null}
         prevLabel={null}
       >
