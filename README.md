@@ -6,6 +6,7 @@
     <li><a href="#technologies">Technologies</a></li>
     <li><a href="#description">Description</a></li>
     <li><a href="#heroku">Heroku</a></li>
+    <li><a href="#screenshot">Screenshot</a></li>
     <li><a href="#installtion">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributors">Contributors</a></li>
@@ -41,6 +42,10 @@
 ## [Heroku](#table-of-contents)
 
 [This Delicious Connection](https://delcon.herokuapp.com/) is currently hosted on Heroku and can also be run locally using the files located in the GitHub repository Github.
+
+## [Screenshot](#table-of-contents)
+
+![app-screenshot](./client/public/images/app-screenshot.png)
 
 ## [Installation](#table-of-contents)
 
