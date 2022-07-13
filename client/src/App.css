@@ -153,33 +153,36 @@ iframe {
   }
 }
 
-@media screen and (max-width: 575px) {
-  h1 {
-    padding-top: 6.5px;
-  }
-
-  h4 {
-    font-size: calc(1rem + 0.125vw);
-    justify-content: center;
-  }
-
-  h3 {
-    font-size: calc(0.75rem + 0.125vw);
-  }
-
-  p {
-    font-size: calc(0.625rem + 0.125vw);
-  }
-
-  .App-logo {
-    max-width: 150px;
-  }
-
-  .container {
-    flex-direction:column
-  }
-
-  #login-card, #signup-card {
-    padding: 1.5rem
-  }
+@media screen and (max-width: 991px) {
+    h1 {
+        padding-top: 6.5px;
+      }
+    
+      h4 {
+        font-size: calc(1rem + 0.125vw);
+        justify-content: center;
+      }
+    
+      h3 {
+        font-size: calc(0.75rem + 0.125vw);
+      }
+    
+      p {
+        font-size: calc(0.625rem + 0.125vw);
+      }
+    
+      .App-logo {
+        max-width: 150px;
+      }
+    
+      .container {
+        flex-direction: column
+      }
+    
+      #login-card,
+      #signup-card {
+        padding: 1.5rem
+      }
 }
+
+
