@@ -174,4 +174,12 @@ iframe {
   .App-logo {
     max-width: 150px;
   }
+
+  .container {
+    flex-direction:column
+  }
+
+  #login-card, #signup-card {
+    padding: 1.5rem
+  }
 }
