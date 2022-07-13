@@ -21,11 +21,12 @@
 ![ReactJS](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
 ![Apollo GraphQL](https://img.shields.io/static/v1?style=for-the-badge&message=Apollo+GraphQL&color=311C87&logo=Apollo+GraphQL&logoColor=FFFFFF&label=)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
-![Git](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![NPM](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
 ![Heroku](https://img.shields.io/badge/Heroku-430098?logo=Git&logoColor=white)
 
