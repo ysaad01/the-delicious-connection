@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { YelpAPI } from "../utils/yelpAPI";
 import { Jumbotron, Container, Col, Form, Button, Row } from "react-bootstrap";
 import { Randomizer } from "../utils/Randomizer";
-// import * as ReactBootStrap from "react-bootstrap";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState("");
@@ -53,9 +52,9 @@ const SearchLocation = () => {
     <>
       <Jumbotron fluid>
         <Container>
-          <h3>Restaurant Decision Tool</h3>
-          <Row className="yelp-box">
-            <Col xs={12} md={6} lg={4} xl={4} className="search-loc">
+          <Row>
+            <h2>Restaurant Decision Tool</h2>
+            <Col xs={12} md={5} lg={5} xl={4} className="search-loc">
               <Form onSubmit={handleFormSubmit}>
                 <Form.Row>
                   <Col xs={12}>
@@ -125,25 +124,27 @@ const SearchLocation = () => {
                   <Col xs={12}></Col>
                 </Form.Row>
                 <Button
+                  id="submit-button"
                   type="submit"
-                  variant="success"
+                  variant="secondary"
                   size="lg"
-                  className="mt-2"
+                  className="mt-3"
                 >
                   {buttonText}
                 </Button>
               </Form>
             </Col>
             <Col>
-              <Row className="mb-3">
+              <Row className="mb-5">
                 {!loading ? (
                   <></>
                 ) : (
                   <div className="d-flex justify-content-center">
-                    <ClimbingBoxLoader
+                    <PacmanLoader
+                      id="loader"
                       color={"#ffff"}
                       loading={loading}
-                      size={25}
+                      size={45}
                     />
                   </div>
                 )}
@@ -157,6 +158,26 @@ const SearchLocation = () => {
                       No restaurants fit your search criteria. Please try again.
                     </h4>
                   </>
+                )}
+
+                {!calledApi && !restaurantLength ? (
+                  <>
+                    <Col xs={12} md={10} lg={8} xl={8}>
+                      <div className="search-steps">
+                        <h4>The Rundown: </h4>
+                        <p>1. Enter either a valid zip code or address </p>
+                        <p>
+                          2. Select a price range that you're willing to drop
+                        </p>
+                        <p>
+                          3. Select a distance you're comfortable using your gas
+                          on
+                        </p>
+                      </div>
+                    </Col>
+                  </>
+                ) : (
+                  <></>
                 )}
 
                 {!calledApi ? (

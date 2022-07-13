@@ -56,7 +56,7 @@ const SignupForm = () => {
 
   return (
     <Col>
-      <h4>Signup</h4>
+      <h2>Signup</h2>
       <div className="d-flex justify-content-center" id="signup-form">
         <div className="card" id="signup-card">
           {/* This is needed for the validation functionality above */}
@@ -126,6 +126,7 @@ const SignupForm = () => {
                 )
               }
               type="submit"
+              variant="secondary"
             >
               Submit
             </Button>

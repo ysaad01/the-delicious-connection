@@ -37,17 +37,15 @@ h4 {
 .app-title {
   margin-right: 7.5px;
 }
-
 /* NAV STYLING */
 #nav-buttons {
   margin-right: 1rem;
 }
+.nav-content {
+  align-items: center;
+}
 
 /* ABOUT STYLING */
-
-/* #about {
-  color: #000;
-} */
 
 #about-card {
   background-color: rgba(234, 97, 43, 0.75);
@@ -113,6 +111,11 @@ iframe {
 .search-loc {
   display: flex;
   justify-content: space-evenly;
+}
+
+.search-steps {
+  background-color: rgba(33, 55, 66, 0.6);
+  padding: 2.55rem;
 }
 
 /* FOOTER STYLING */

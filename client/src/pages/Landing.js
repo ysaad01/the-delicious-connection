@@ -29,7 +29,7 @@ const Landing = () => {
                   >
                     <Row>
                       <Carousel />
-                      <h4>Lets Help You Too</h4>
+                      <h4>& Want to Help You Too</h4>
                     </Row>
                   </div>
                 </div>
